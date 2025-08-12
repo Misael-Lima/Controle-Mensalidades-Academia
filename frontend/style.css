@@ -1,0 +1,9 @@
+body { font-family: Arial, sans-serif; background:#f5f7fb; padding:18px; }
+h1 { color:#2c3e50; }
+.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:12px; }
+.card { background:white; padding:14px; border-radius:8px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+input { display:block; margin:6px 0; padding:8px; width:100%; box-sizing:border-box; }
+button { padding:8px 10px; margin:6px 4px 6px 0; }
+pre { white-space: pre-wrap; background:#efefef; padding:8px; border-radius:6px; }
+ul { max-height:220px; overflow:auto; padding-left:18px; }
+.buttons { margin:6px 0; }
