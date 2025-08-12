@@ -8,6 +8,8 @@
 <body>
     <h1>Controle de Academia</h1>
     <div class="grid">
+        
+        <!-- CLIENTES -->
         <div class="card">
             <h2>Clientes</h2>
             <input id="cliente_nome" placeholder="Nome" />
@@ -15,56 +17,67 @@
             <input id="cliente_telefone" placeholder="Telefone" />
             <input id="cliente_mensalidade" placeholder="Valor mensal (ex: 120.00)" />
             <div class="buttons">
-                <button onclick="criarCliente()">Criar</button>
+                <button class="success" onclick="criarCliente()">Criar</button>
             </div>
             <input id="cliente_id_editar" placeholder="ID para excluir" />
-            <button onclick="deletarCliente()">Excluir Cliente</button>
+            <button class="danger" onclick="deletarCliente()">Excluir Cliente</button>
             <h3>Lista de Clientes</h3>
             <button onclick="listarClientes()">Atualizar Lista</button>
             <ul id="lista_clientes"></ul>
         </div>
 
+        <!-- MENSALIDADES -->
         <div class="card">
             <h2>Mensalidades</h2>
             <input id="mensal_cliente_id" placeholder="ID do Cliente" />
             <input id="mensal_valor" placeholder="Valor" />
             <input id="mensal_vencimento" placeholder="Vencimento (YYYY-MM-DD)" />
-            <button onclick="criarMensalidade()">Criar Mensalidade</button>
+            <button class="success" onclick="criarMensalidade()">Criar Mensalidade</button>
+            
             <h3>Gerar mensalidades do mês</h3>
             <input id="gerar_mes" placeholder="MM" style="width:80px" />
             <input id="gerar_ano" placeholder="YYYY" style="width:100px" />
             <button onclick="gerarMensalidades()">Gerar para todos (procedure)</button>
+
+            <!-- Exclusão antes da lista -->
+            <h3>Excluir Mensalidade</h3>
+            <input id="mensalidade_id_excluir" placeholder="ID para excluir" />
+            <button class="danger" onclick="deletarMensalidade()">Excluir Mensalidade</button>
+
             <h3>Lista de Mensalidades</h3>
             <button onclick="listarMensalidades()">Atualizar Lista</button>
-            <input id="mensalidade_id_excluir" placeholder="ID para excluir" />
-            <button onclick="deletarMensalidade()">Excluir Mensalidade</button>
             <ul id="lista_mensalidades"></ul>
         </div>
 
+        <!-- PAGAMENTOS -->
         <div class="card">
             <h2>Pagamentos</h2>
             <input id="pag_mensalidade_id" placeholder="ID Mensalidade (opcional)" />
             <input id="pag_cliente_id" placeholder="ID Cliente (se não usar mensalidade)" />
             <input id="pag_valor" placeholder="Valor" />
-            <button onclick="registrarPagamento()">Registrar Pagamento</button>
+            <button class="success" onclick="registrarPagamento()">Registrar Pagamento</button>
+            
             <h3>Lista de Pagamentos</h3>
             <button onclick="listarPagamentos()">Atualizar Lista</button>
             <ul id="lista_pagamentos"></ul>
         </div>
 
+        <!-- RELATÓRIOS -->
         <div class="card">
             <h2>Relatórios / Inadimplentes</h2>
-            <button onclick="listarInadimplentes()">Listar Inadimplentes</button>
+            <button class="danger" onclick="listarInadimplentes()">Listar Inadimplentes</button>
             <ul id="lista_inadimplentes"></ul>
+
             <h3>Relatório: total por cliente (JOIN + GROUP BY)</h3>
             <button onclick="relatorioTotais()">Gerar relatório</button>
             <pre id="relatorio_totais"></pre>
+
             <h3>Média de pagamentos (Function)</h3>
             <button onclick="mediaPagamentos()">Calcular média</button>
             <div id="media_pagamentos"></div>
         </div>
-    </div>
 
+    </div>
     <script src="app.js"></script>
 </body>
 </html>

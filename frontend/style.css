@@ -1,9 +1,119 @@
-body { font-family: Arial, sans-serif; background:#f5f7fb; padding:18px; }
-h1 { color:#2c3e50; }
-.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:12px; }
-.card { background:white; padding:14px; border-radius:8px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
-input { display:block; margin:6px 0; padding:8px; width:100%; box-sizing:border-box; }
-button { padding:8px 10px; margin:6px 4px 6px 0; }
-pre { white-space: pre-wrap; background:#efefef; padding:8px; border-radius:6px; }
-ul { max-height:220px; overflow:auto; padding-left:18px; }
-.buttons { margin:6px 0; }
+/* ======== ESTILO GERAL ======== */
+body { 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    background: linear-gradient(135deg, #e6f0ff, #f5f7fb);
+    padding: 18px; 
+    margin: 0;
+}
+
+h1 { 
+    color: #1a2b4c; 
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+/* ======== GRID ======== */
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 16px; 
+}
+
+/* ======== CARDS ======== */
+.card { 
+    background: white; 
+    padding: 16px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+    color: #2a4d8f;
+    margin-top: 0;
+}
+
+/* ======== INPUTS ======== */
+input { 
+    display: block; 
+    margin: 6px 0; 
+    padding: 10px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+    border-color: #2a7be4;
+    box-shadow: 0 0 5px rgba(42, 123, 228, 0.3);
+    outline: none;
+}
+
+/* ======== BOTÕES ======== */
+button { 
+    padding: 10px 14px; 
+    margin: 6px 4px 6px 0; 
+    border: none; 
+    border-radius: 8px;
+    background: #2a7be4; 
+    color: white; 
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background: #1d5cb8;
+    transform: scale(1.03);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Botão alternativo (verde) */
+button.success {
+    background: #28a745;
+}
+button.success:hover {
+    background: #1e7d34;
+}
+
+/* Botão de perigo (vermelho) */
+button.danger {
+    background: #dc3545;
+}
+button.danger:hover {
+    background: #b02a37;
+}
+
+/* ======== LISTAS ======== */
+ul { 
+    max-height: 220px; 
+    overflow: auto; 
+    padding-left: 18px; 
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* ======== TEXTOS E RELATÓRIOS ======== */
+pre { 
+    white-space: pre-wrap; 
+    background: #eef3f9; 
+    padding: 8px; 
+    border-radius: 6px; 
+    font-family: monospace;
+}
+
+/* ======== SEÇÃO DE BOTÕES AGRUPADOS ======== */
+.buttons { 
+    margin: 6px 0; 
+}
